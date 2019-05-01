@@ -1,0 +1,29 @@
+
+body{
+	background-image: url("tech/company.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;
+}
+h1{
+	text-align: center;
+	text-size:100px;
+}
+h2{
+	text-align: center;
+}
+h3{
+	text-align: center;
+}
+.hover{
+	transition: all 1s ease;
+	border-radius: 10px;
+	border:2px solid white;
+}
+.hover:hover{
+	transform: scale(1.1,1.1);
+}
+.container{
+	width: 50%;
+}

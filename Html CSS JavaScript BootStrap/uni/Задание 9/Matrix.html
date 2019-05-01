@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Matrix</title>
+</head>
+<body>
+<center>
+<h2>Подредете числата в последователен ред ( отляво надясно ), като започнете от горният ляв ъгъл на матрицата.</h2>
+    <table id="table" cellspacing=5px>
+        <tr>
+            <th ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img src='fourteen.jpeg' id='14' draggable='true' ondragstart='drag(event)'>
+            </th>
+            <th ondrop="drop(event)" ondragover="allowDrop(event)" > 
+                <img src='eight.jpeg' id='8' draggable='true' ondragstart='drag(event)'>
+            </th>
+            <th ondrop="drop(event)" ondragover="allowDrop(event)" >
+                <img src='twelve.jpeg' id='12' draggable='true' ondragstart='drag(event)'>
+            </th>
+            <th ondrop="drop(event)" ondragover="allowDrop(event)" >
+                <img src='four.jpeg' id='4' draggable='true' ondragstart='drag(event)'>
+            </th>
+        </tr>
+        <tr>
+            <th ondrop="drop(event)" ondragover="allowDrop(event)" >
+                <img src='five.jpeg' id='5' draggable='true' ondragstart='drag(event)'>
+            </th>
+            <th ondrop="drop(event)" ondragover="allowDrop(event)" > 
+                <img src='six.jpeg' id='6' draggable='true' ondragstart='drag(event)'>
+            </th>
+            <th ondrop="drop(event)" ondragover="allowDrop(event)" >
+                <img src='seven.jpeg' id='7' draggable='true' ondragstart='drag(event)'>
+            </th>
+            <th ondrop="drop(event)" ondragover="allowDrop(event)" >
+                <img src='three.jpeg' id='3' draggable='true' ondragstart='drag(event)'>
+            </th>
+        </tr>
+        <tr>
+            <th ondrop="drop(event)" ondragover="allowDrop(event)" >
+                <img src='fiftheen.jpeg' id='15' draggable='true' ondragstart='drag(event)'>
+            </th>
+            <th ondrop="drop(event)" ondragover="allowDrop(event)" >  
+                <img src='ten.jpeg' id='10' draggable='true' ondragstart='drag(event)'>
+            </th>
+            <th ondrop="drop(event)" ondragover="allowDrop(event)" >
+                <img src='eleven.jpeg' id='11' draggable='true' ondragstart='drag(event)'>
+            </th>
+            <th ondrop="drop(event)" ondragover="allowDrop(event)" >
+                <img src='one.jpg' id='1' draggable='true' ondragstart='drag(event)'>
+            </th>
+        </tr>
+        <tr>
+            <th ondrop="drop(event)" ondragover="allowDrop(event)" >
+                <img src='thirteen.png' id='13' draggable='true' ondragstart='drag(event)'>
+            </th>
+            <th ondrop="drop(event)" ondragover="allowDrop(event)" > 
+                <img src='two.jpeg' id='2' draggable='true' ondragstart='drag(event)'>
+            </th>
+            <th ondrop="drop(event)" ondragover="allowDrop(event)" >
+                <img src='nine.jpeg' id='9' draggable='true' ondragstart='drag(event)'>
+            </th>
+            <th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+        </tr>
+    </table>
+<button type="submit" id="btn">Check result</button>
+<p id="resultMsg"></p>
+</center>
+</body>
+<style>
+
+button {
+margin-top: 50px;
+width: 200px;
+}
+
+h2 {
+margin-top: 200px;
+color:white;
+}
+
+body {
+    background-image: url('lightBrown.jpeg');
+}
+
+#imgTable {
+    margin-bottom: 100px;
+    background-color: white;
+}
+
+#imgContainer {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    bottom: 500px;
+    margin-left: 300px;
+}
+
+table{
+    width: 400px;
+    height: 400px;
+    background-color:white;
+    margin-top: 100px;
+    border:solid;
+    border-width: 5px;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: black;
+}
+
+th {
+    border:solid;
+    width: 200px;
+    height: 50px;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+}
+
+</style>
+<script>
+
+var th1 = document.querySelectorAll("th")[0];
+var th2 = document.querySelectorAll("th")[1];
+var th3 = document.querySelectorAll("th")[2];
+var th4 = document.querySelectorAll("th")[3];
+var th5 = document.querySelectorAll("th")[4];
+var th6 = document.querySelectorAll("th")[5];
+var th7 = document.querySelectorAll("th")[6];
+var th8 = document.querySelectorAll("th")[7];
+var th9 = document.querySelectorAll("th")[8];;
+var th10 = document.querySelectorAll("th")[9];
+var th11 = document.querySelectorAll("th")[10];
+var th12 = document.querySelectorAll("th")[11];
+var th13 = document.querySelectorAll("th")[12];
+var th14 = document.querySelectorAll("th")[13];
+var th15 = document.querySelectorAll("th")[14];
+
+var imgContent1 = "<img src='one.jpg' id='1' draggable='true' ondragstart='drag(event)'>";
+var imgContent2 = "<img src='two.jpeg' id='2' draggable='true' ondragstart='drag(event)'>";
+var imgContent3 = "<img src='three' id='3' draggable='true' ondragstart='drag(event)'>";
+var imgContent4 = "<img src='four.jpeg' id='4' draggable='true' ondragstart='drag(event)'>";
+var imgContent5 = "<img src='five.jpeg' id='5' draggable='true' ondragstart='drag(event)'>";
+var imgContent6 = "<img src='six.jpeg' id='6' draggable='true' ondragstart='drag(event)'>";
+var imgContent7 = "<img src='seven.jpeg' id='7' draggable='true' ondragstart='drag(event)'>";
+var imgContent8 = "<img src='eight.jpeg' id='8' draggable='true' ondragstart='drag(event)'>";
+var imgContent9 = "<img src='nine.jpeg' id='9' draggable='true' ondragstart='drag(event)'>";
+var imgContent10 = "<img src='ten.jpeg' id='10' draggable='true' ondragstart='drag(event)'>";
+var imgContent11 = "<img src='eleven.jpeg' id='11' draggable='true' ondragstart='drag(event)'>";
+var imgContent12 = "<img src='twelve.jpeg' id='12' draggable='true' ondragstart='drag(event)'>";
+var imgContent13 = "<img src='thirteen.png' id='13' draggable='true' ondragstart='drag(event)'>";
+var imgContent14 = "<img src='fourteen.jpeg' id='14' draggable='true' ondragstart='drag(event)'>";
+var imgContent15 = "<img src='fifthteen.jpeg' id='15' draggable='true' ondragstart='drag(event)'>";
+
+var imgArr = [ imgContent1, imgContent2, imgContent3, imgContent4, imgContent5, imgContent6, imgContent7, imgContent8, imgContent9, imgContent10, imgContent11, imgContent12, imgContent13, imgContent14,           imgContent15  ];
+
+var thArr = [ th1, th2 ,th3 ,th4 ,th5 , th6 , th7, th8, th9, th10, th11, th12, th13, th14, th15 ];
+document.getElementById("btn").addEventListener("click", function(){
+
+var errors = false;
+var counter = 0;
+while(counter < thArr.length){
+    if( thArr[counter].innerHTML.toString() != imgArr[counter] ){
+        errors = true;
+        break;
+    }
+}
+
+    if( errors ){
+
+document.getElementById("resultMsg").innerHTML = "<b>Моля, опитайте отново !</b>";
+    }   
+    else {
+
+document.getElementById("resultMsg").innerHTML = "<b>Вие печелите !</b>";
+     }
+});
+
+function allowDrop(e) {
+    e.preventDefault();
+}
+
+function drag(e) {
+    e.dataTransfer.setData("text", e.target.id);
+}
+
+function drop(e) {
+    e.preventDefault();
+    var data = e.dataTransfer.getData("text");
+    e.target.appendChild(document.getElementById(data));
+}
+
+</script>
+</html>

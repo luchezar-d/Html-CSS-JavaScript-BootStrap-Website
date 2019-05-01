@@ -1,0 +1,32 @@
+#contain{
+	width: 1200px;
+	height: 600px;
+	background-color: #ffd480;
+	border-radius: 5px;
+	padding: 10px;
+	text-align: center;
+	border:1px solid #cc8800;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+body{
+	background-color: #d6d6c2;
+}
+#header{
+	width: 100%;
+	height: 100px;
+	background-color: #ffd966;
+	border: 1px solid #ffb84d;
+	border-radius: 10px;
+}
+h1{
+padding: 10px;
+color:  #4d3300;
+}
+#body{
+	margin-top: 10px;
+}
+#boton{
+	text-decoration: none;
+	color: #995c00;
+}

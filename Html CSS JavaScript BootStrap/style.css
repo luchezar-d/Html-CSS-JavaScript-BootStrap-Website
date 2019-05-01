@@ -1,0 +1,155 @@
+.navbar{
+  	margin-bottom: 0;
+  	border-radius: 0;
+  	background-color: #353535;
+  	color: #FFF;
+  	padding:  0;
+  	border: 0;
+  	font-size: 1.2em;
+  }
+  .carousel-caption{
+    top:60%;
+    transform: translateY(-60%);
+    text-transform: uppercase;
+  }
+  @font-face{
+    font-family: dark;
+    src:url("dark.otf");
+  }
+  h2{
+    font-family: dark;
+  }
+  p{
+    font-family: dark;
+  }
+  footer{
+    width: 100%;
+    background-color: #353535;
+    padding: 1%;
+    color: #FFF;
+  }
+  .fa{
+    padding: 10px;
+    font-size: 30px;
+    color: #FFF;
+    transition: all 1s ease;
+  }
+  .fa:hover{
+    text-decoration: none;
+  }
+  .fa-facebook{
+    animation: myframessss 0.5s infinite;
+  }
+  .fa-twitter{
+    animation: myframesss 0.5s infinite;
+  }
+  .fa-instagram{
+    animation: myframess 0.5s infinite;
+  }
+  .fa-facebook:hover{
+    color: #3b5998;
+    transform: scale(1.5,1.5);
+  }
+  .fa-twitter:hover{
+    color: #00aced;
+    transform: scale(1.5,1.5);
+  }
+  .fa-instagram:hover{
+    color: #417399;
+    transform: scale(1.5,1.5);
+  }
+  .icon{
+    max-width: 120px;
+    margin:1% auto;
+    border-radius: 10px;
+    border: 2px solid white;
+    transition: all 1s ease;
+  }
+  .icon:hover{
+    transform: scale(1.3,1.3);
+  }
+  #university{
+    box-shadow: 2px 2px 4px 4px black;
+    transform: rotate(7deg);
+    padding: 10px;
+    transition: all 1s ease;
+    margin: 13px;
+  }
+  #university:hover{
+    transform: rotate(360deg);
+    transition: 1s;
+    transform: scale(1.1,1.1);
+    padding: 0;
+  }
+  #hobby{
+    box-shadow: 2px 2px 6px 6px black;
+    transform: rotate(-7deg);
+    padding: 10px;
+    transition: all 1s ease;
+  }
+  #hobby:hover{
+    transform: rotate(360deg);
+    transition: 1s;
+    transform: scale(1.1,1.1);
+    padding: 0;
+  }
+  .jumbotron{
+    padding: 30px;
+  }
+  .jumbotron a{
+    animation: myframes 2s infinite;
+  }
+  @keyframes myframes{
+    0%{color: #3b5998}
+    25%{color: #55acee}
+    50%{color: #dd4b39}
+    75%{color: #ff0000}
+    100%{color: #007bb5}
+  }
+  @keyframes myframess{
+    0%{color: #55acee}
+    50%{color: #3b5998}
+    100%{color:  #007bb5}
+  }
+  @keyframes myframesss{
+    100%{color: #55acee}
+    50%{color: #3b5998}
+    0%{color:  #007bb5}
+  }
+  @keyframes myframessss{
+    50%{color: #55acee}
+    100%{color: #3b5998}
+    0%{color:  #007bb5}
+  }
+  @media (max-width: 600px){
+    .carousel-caption{
+      display: none;
+    }
+    #hobby{
+      max-width: 270px;
+    }
+    #university{
+      max-width: 270px;
+    }
+    #icon{
+      max-width: 150px;
+    }
+    h4{
+      font-size: 80%;
+    }
+    #smaller{
+      font-size: 17px;
+    }
+    #smaller2{
+      font-size: 17px;
+    }
+    #smaller3{
+      font-size: 17px;
+    }
+    #hash4{
+      font-size: 20px;
+    }
+    #hash4-2{
+      font-size: 20px;
+    }
+  }

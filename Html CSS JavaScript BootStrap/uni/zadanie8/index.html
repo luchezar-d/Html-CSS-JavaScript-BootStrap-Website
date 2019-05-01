@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Business Calculator</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+	body{
+		background-image: url("back3.jpg");
+		background-size: cover;
+	}
+		.calculator-container{
+			opacity: .6;
+			border:2px solid #ccc;
+			padding: 20px;
+			width: 365px;
+			height: 500px;
+			background-color:  #007bb5;
+			transition: all 1s ease;
+			border-radius: 13px;
+		}
+		#prihod{
+			border-radius: 20px;
+			background-color: #00aced;
+			color: white;
+			border: 0;
+		}
+		#razhod{
+			border-radius: 20px;
+			background-color: #00aced;
+			color: white;
+			border:0;
+		}
+		.calculator-container:hover{
+			background-color: #2E2EFE;
+			opacity: 1;
+		}
+		.buttons{
+			margin-top: 30px;
+		}
+		#button{
+			font-family: sens-serif;
+			font-size: 20px;
+			background-color: #00aced;
+			color: #fff;
+			border:0;
+			border-radius: 10px;
+			cursor: pointer;
+			width: 100%;
+		}
+		#button1{
+			font-family: sens-serif;
+			font-size: 20px;
+			background-color: #00aced;
+			color: #fff;
+			border:0;
+			border-radius: 10px;
+			cursor: pointer;
+			width: 100%;
+		}
+		#button2{
+			font-family: sens-serif;
+			font-size: 20px;
+			background-color: #00aced;
+			color: #fff;
+			border:0;
+			border-radius: 10px;
+			cursor: pointer;
+			width: 100%;
+		}
+		#button3{
+			font-family: sens-serif;
+			font-size: 20px;
+			background-color: #00aced;
+			color: #fff;
+			border:0;
+			border-radius: 10px;
+			cursor: pointer;
+			width: 100%;
+		}
+		#button:hover{
+			background-color: #007bb5;
+			border:1px solid white;
+		}
+		#button1:hover{
+			background-color: #007bb5;
+			border:1px solid white;
+		}
+		#button2:hover{
+			background-color: #007bb5;
+			border:1px solid white;
+		}
+		#button3:hover{
+			background-color: #007bb5;
+			border:1px solid white;
+		}
+		@media screen and (min-width: 200px) and (max-width: 600px){
+			.calculator-container{
+				max-width: 80%;
+				max-height: auto;
+			}
+			#Data1{
+				max-width: 200px;
+				max-height: 30px;
+			}
+			#Data2{
+				max-width: 200px;
+				max-height: 30px;
+			}
+			#Data3{
+				max-width: 200px;
+				max-height: 30px;
+			}
+		}
+
+	</style>
+
+	<script type="text/javascript">
+
+
+		function pechalba(){
+			var prih = prihod.value;
+			var razh = razhod.value;
+			textOutput1.value=prih-razh;
+		}
+		function danakNaFirmata(){
+			var prih = prihod.value;
+			var razh = razhod.value;
+			textOutput2.value=(20 / 100) * (prih-razh);
+		}
+		function drugMesec(){
+			var prih = prihod.value;
+			var razh = razhod.value;
+			textOutput3.value=prih-razh;
+			textOutput4.value=(20 / 100) * (prih-razh);
+		}
+	</script>
+</head>
+<body>
+	<center><div class="calculator-container">
+		<center><div class="inputs">			
+		<input id="prihod" type="text" name="prihod" placeholder="Въведи приход"
+	 		style="width: 170px; height: 60px; text-align: center;font-size: 20px;" name="prihod1">
+	 	<input id="razhod" type="text" name="razhod" placeholder="Въведи разход"
+			 style="width: 177px; height: 60px; text-align: center; font-size: 20px;" name="razhod1">
+		</div></center>
+		<center><div class="buttons">
+			<center><input id="button" type="button" value="Печалба" onclick="pechalba()" style="padding: 10px;margin-bottom: 10px;"></center>
+			<center><input id="button2" type="button" value="Данък на фирмата" onclick="danakNaFirmata()" style="padding: 10px; margin-top: 10px;"></center>
+			<center><input id="button1" type="button" value="За друг месец" onclick="drugMesec()" style="padding: 10px;margin-top: 10px;"></center>
+		</div></center>
+		<div class="outputs" style="width: 200px;">
+			<p style="margin: 0;padding: 0;color: white;">Януари</p>
+			<input type="text" id="textOutput1" name="" placeholder="Печалбата за Януари" style="margin-top: 0px;">
+			<input type="text" id="textOutput2" name="" placeholder="Данък за Януари" style="margin-top: 20px;">
+			<p style="margin: 0;padding: 0;color: white;">Друг месец</p>
+			<input type="text" id="textOutput3" name="" placeholder="Печалба за друг месец" style="margin-top: 0px;">
+			<input type="text" id="textOutput4" name="" placeholder="Данък за друг месец" style="margin-top: 20px;">
+		</div>
+	</div></center>
+</body>
+</html>

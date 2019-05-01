@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #container {
+                position:absolute;
+                background-color: #c0c9d8;
+                margin-top: 20px;
+                border: 2px solid #4c5668;
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 2px 2px 7px 3px  black;
+                }
+            #elem{
+                position: absolute;
+                background-color: #c0c9d8;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -o-user-select: none;
+                -ms-user-select: none;
+                -khtml-user-select: none;     
+                user-select: none;
+            }
+            #elem:hover{
+                color:#0468cc;
+            }
+            p{
+                border: 2px solid #4c5668;
+                width: 500px;
+                padding: 20px;
+                border-radius: 30px;
+                background-color: #c0c9d8;
+            }
+            p:hover{
+                transform: scale(1.1,1.1);
+            }
+            body{
+                background-color: #95b3e2;
+            }
+            .centar{
+                position: absolute;
+                top: 55%;
+                left: 45%;
+                transform: translateX(-55%) translateY(-40%;);
+                text-align: center;
+            }
+            #btn{
+                font-family: sans-serif;
+                font-size: 15px;
+                background-color: #279;
+                color: #fff;
+                border: 0px;
+                border-radius: 20px;
+                padding: 15px;
+                cursor: pointer;
+                margin-bottom: 20px;
+            }
+            #btn:hover{
+                background-color: #38a;
+            }
+        </style>
+        <script>
+            var mydragg = function(){
+                return {
+                    move : function(divid,xpos,ypos){
+                        divid.style.left = xpos + 'px';
+                        divid.style.top = ypos + 'px';
+                    },
+                    startMoving : function(divid,container,evt){
+                        evt = evt || window.event;
+                        var posX = evt.clientX,
+                            posY = evt.clientY,
+                        divTop = divid.style.top,
+                        divLeft = divid.style.left,
+                        eWi = parseInt(divid.style.width),
+                        eHe = parseInt(divid.style.height),
+                        cWi = parseInt(document.getElementById(container).style.width),
+                        cHe = parseInt(document.getElementById(container).style.height);
+                        document.getElementById(container).style.cursor='move';
+                        divTop = divTop.replace('px','');
+                        divLeft = divLeft.replace('px','');
+                        var diffX = posX - divLeft,
+                            diffY = posY - divTop;
+                        document.onmousemove = function(evt){
+                            evt = evt || window.event;
+                            var posX = evt.clientX,
+                                posY = evt.clientY,
+                                aX = posX - diffX,
+                                aY = posY - diffY;
+                                if (aX < 0) aX = 0;
+                                if (aY < 0) aY = 0;
+                                if (aX + eWi > cWi) aX = cWi - eWi;
+                                if (aY + eHe > cHe) aY = cHe -eHe;
+                            mydragg.move(divid,aX,aY);
+                        }
+                    },
+                    stopMoving : function(container){
+                        var a = document.createElement('script');
+                        document.getElementById(container).style.cursor='default';
+                        document.onmousemove = function(){}
+                    },
+                }
+            }();
+
+        </script>
+    </head>
+    <body>
+	<center><p><strong> Коя е правилната двойка варианти? Използвайте влачене.</strong> </p></center>
+        <div id='container' style="width: 1200px;height: 200px;top:100px;left:50px;">
+		Един от синовете на хан Кубрат, Аспарух, дошъл със своите хора около устието на Дунава.
+		Това не се харесало на _________________________ и той повел огромна армия срещу _________________________ лагер. <br />
+			
+            <div id="elem" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");' style="width: 190px;height: 100px; bottom: 45px;">
+                1.Византийския император
+            </div>
+			
+			<div id="elem" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");' style="width: 180px;height: 100px; left: 200px; bottom: 45px;">
+                2.прабългарския
+            </div>
+			
+			<div id="elem" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");' style="width: 190px;height: 100px; left: 340px; bottom: 45px;">
+                3.Византийския Император
+            </div>
+			<div id="elem" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");' style="width: 180px;height: 100px; left: 550px; bottom: 45px;">
+                4.византийския
+            </div>
+        </div>
+        <div class="centar">
+            <h3>Край !</h3>
+            <button type="button" onclick="window.location.href='flag.html'" id="btn">Canvas</button>
+		</div>
+    </body>
+</html

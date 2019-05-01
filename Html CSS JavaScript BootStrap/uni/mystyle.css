@@ -1,0 +1,102 @@
+body{
+	margin:0;
+	background-image: url("images/mountains.png");
+	background-size: cover;
+	background-repeat: repeat;
+}
+button{
+	margin-top: 10px;
+	background-color: #5E4485;
+	color: #fff;
+	border:2px solid #ccc;
+	border-radius: 5px;
+	padding: 15px;
+	cursor: pointer;
+}
+button:hover{
+	background-color: #6E5090;
+}
+button:active{
+	transform: translateY(4px);
+}
+.navbar-horizontal{
+	background-color: #5E4485;
+}
+.navbar-horizontal ul{
+	list-style: none;
+	background-color: #5E4485;	
+	margin:0;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.navbar-horizontal ul li{
+	padding: 20px;
+	float: left;
+}
+.navbar-horizontal ul li a{
+	text-decoration: none;
+	color: #FFF;
+	display: block;
+	width: 150px;
+}
+.navbar-horizontal ul li:hover{
+	background-color: #6E5090;
+}
+.gallery{
+	opacity: .7;
+	width: 60%;
+	padding: 20px;
+	background-color: #ccc;
+	border-radius: 10px;
+	margin-top: 100px;
+}
+img{
+	width: 100px;
+	height: 90px;
+	border-radius: 10px;
+}
+img:hover{
+	transform: scale(1.5,1.5);
+	border-radius: 10px;
+}
+
+footer{
+	background-color: #5E4485;
+	padding: 10px;
+	width: 100%;
+	margin-top:20px;
+	margin-right: 0;
+	text-align: center;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+a:hover{
+	color:#ccc;
+}
+.navbar-vertical{
+	opacity: .6;
+	float: left;
+	position: absolute;
+	top: 160px;
+	left: 0;
+}
+.navbar-vertical ul{
+	list-style: none;
+	margin:0;
+	padding: 0px;
+	width: 200px;
+}
+.navbar-vertical ul li{
+	background-color: #34495E;
+	padding: 20px;
+}
+.navbar-vertical ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+.navbar-vertical ul li:hover{
+	background-color: #ccc;

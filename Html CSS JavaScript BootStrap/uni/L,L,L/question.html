@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas Drawings</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<script type="text/javascript">
+	</script>
+	<style type="text/css">
+		#btn{
+    float: right;
+    margin:40px;
+}
+	</style>
+</head>
+<body>
+	<center><div id="contain">
+		<div id="header">
+			<h1>Отговорете на следния въпрос.</h1>
+		</div>
+		<div id="body">
+			<p>Колко триъгълника виждате на снимката?</p>
+			<img src="index.png" width="300px" height="300px;"><br>
+			<form action="/" onsubmit="if(document.getElementById('check5').checked) { alert('Good'); return false; } else { alert('try again'); return false; }">
+   				 <input type="checkbox" name="checkbox" value="check" id="check1" />26
+   				 <input type="checkbox" name="checkbox" value="check" id="check2" />30
+   				 <input type="checkbox" name="checkbox" value="check" id="check3" />32
+   				 <input type="checkbox" name="checkbox" value="check" id="check4" />38
+   				 <input type="checkbox" name="checkbox" value="check" id="check5" />44<br>
+   			 <input type="submit" name="email_submit" value="Try" />
+			</form>
+		</div>
+		<button type="button" onclick="window.location.href='question1.html'" id="btn">Следшащ въпрос ></button>
+	</div></center>
+</body>
+</html>

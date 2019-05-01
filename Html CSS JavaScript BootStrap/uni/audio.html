@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Audio</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.oformqne{
+			text-align: center;
+		}
+		@font-face{
+			font-family: batman;
+			src:url("batmfa__.ttf");
+		}
+		h1{
+			font-family: batman;
+			text-align: center;
+		}
+		body{
+			background-image: url("tech/summer.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#myframe{
+			transition: all 1s ease;
+		}
+		#myframe:hover{
+			transform: scale(1.1,1.1);
+		}
+		#myaudio{
+			transition: all 1s ease;
+		}
+		#myaudio:hover{
+			transform: scale(1.1,1.1);
+		}
+	</style>
+
+</head>
+<body>
+	<h1>Welcome to my audio page. Here you can see an audio bar and an embeded/inframe Youtube video of my fav musician.</h1>
+	<div class="oformqne">
+		<audio id="myaudio" src="faded.mp3" controls="controls" style="border-radius: 10px; box-shadow: 2px 2px 5px 5px black;"></audio>
+	</div>
+	<center><iframe id="myframe" style="margin-top: 50px; border-radius: 10px; box-shadow: 2px 2px 5px 5px black;" width="560" height="315" src="https://www.youtube.com/embed/-Zm2XnSFaY8" frameborder="0" allowfullscreen></iframe></center>
+</body>
+</html>

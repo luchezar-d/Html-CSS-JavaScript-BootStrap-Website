@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Задание 5</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+	
+	<!--The Horizontal menu is fixed -->
+
+		<div class="navbar-horizontal">
+		<ul>
+			<li><a href="#" target="_blank">Home</a></li>
+			<li><a href="#" target="_blank">About</a></li>
+			<li><a href="#" target="_blank">News</a></li>
+			<li><a href="#" target="_blank">More</a></li>
+			<li><a href="#" target="_blank">Contact</a></li>
+		</ul>
+	</div>
+	<center><div class="gallery" align="center">
+		<h1>Welcome to my gallery</h1>
+		<p>Click on the images below to see them in a new tab</p>
+		<a href="images/1.jpg" target="_blank"><img src="images/1.jpg"></a>
+		<a href="images/2.jpg" target="_blank"><img src="images/2.jpg"></a>
+		<a href="images/3.jpg" target="_blank"><img src="images/3.jpg"></a>
+		<a href="images/4.jpg" target="_blank"><img src="images/4.jpg"></a><br>
+		<a href="images/5.jpg" target="_blank"><img src="images/5.jpg"></a>
+		<a href="images/6.jpg" target="_blank"><img src="images/6.jpg"></a>
+		<a href="images/7.jpg" target="_blank"><img src="images/7.jpg"></a>
+		<a href="images/8.jpg" target="_blank"><img src="images/8.jpg"></a><br>
+		<a href="images/9.jpg" target="_blank"><img src="images/9.jpg"></a>
+		<a href="images/10.jpg" target="_blank"><img src="images/10.jpg"></a>
+		<a href="images/11.jpg" target="_blank"><img src="images/11.jpg"></a>
+		<a href="images/12.jpg" target="_blank"><img src="images/12.jpg"></a>
+	</div>
+	</center>
+	
+	<audio autoplay="autoplay" id="audio1" style="display: none;">
+		<source src="sry.mp3" type="audio/mp3">
+	</audio>
+	<center><button type="button" onclick="PlayPause()">Stop/Start background music</button></center>
+	<script type="text/javascript">
+		var myaudio = document.getElementById("audio1");
+		function PlayPause(){
+			if(myaudio.paused){
+				myaudio.play();
+			}else{
+				myaudio.pause();
+			}
+		}
+	</script>
+<footer>
+	<a href="http://Luchezar-d.tk/" target="_blank"><h3 style="padding: 0px;">Copyright @ www.Luchezar-d.tk</a></h3>
+</footer>
+</body>
+</html>

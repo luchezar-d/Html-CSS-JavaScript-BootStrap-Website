@@ -1,0 +1,85 @@
+header{
+	text-align: center;
+	font-family: batman;
+	margin: 30px;
+}
+h1{
+	text-size:100;
+	text-align: center;
+	font-family: batman;
+}
+.has1{
+	width: 600px;
+	text-align: center;
+	border:1px solid #353535;
+	border-radius: 13px;
+	background-color:#ccc;
+	opacity: .6;
+	margin-top: 10px;
+}
+body{
+	background-image: url("tech/backgrounda4.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin:0;
+}
+.news{
+	margin-top: 100px;
+	background-color: red;
+	text-align: center;
+}
+
+@font-face{
+	font-family: "batman";
+	src:url("batmfa__.ttf");
+}
+.navbar{
+	background-color: #353535;
+}
+.navbar ul{
+	list-style: none;
+	margin:0;
+	padding: 0;
+	position: relative;
+	background-color: #353535;
+}
+.navbar ul:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.navbar ul li a{
+	color: white;
+	display: block;
+	text-decoration: none;
+	padding: 20px;
+	width: 150px;
+}
+.navbar ul li{
+	list-style: none;
+	float: left;
+	text-shadow: 0px 0px 10px #00aced,0px 0px 20px
+					 #00aced,0px 0px 30px #00aced,
+						0px 0px 40px #00aced,0px 0px 50px
+							 #00aced,0px 0px 60px #00aced;
+}
+.navbar ul ul{
+	margin:0;
+	padding: 0;
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+.navbar ul li:hover ul{
+	display: block;
+}
+.navbar ul li:hover{
+	background-color: #ccc;
+}
+.navbar ul ul li{
+	float: none;
+	width: 300px;
+}
+.navbar ul ul li a{
+	text-align: left;
+}

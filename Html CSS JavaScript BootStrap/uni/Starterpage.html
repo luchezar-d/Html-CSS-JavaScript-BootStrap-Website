@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="animate.css">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: #000;
+		}
+		.fly-in-text{
+			list-style: none;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+		.fly-in-text li{
+			display: inline-block;
+			margin-right: 50px;
+			color: #ccc;
+			font-size: 3em;
+			font-weight: 300;
+			font-family: bat;
+			opacity: 1;
+			transition: all 2.5s  ease;
+			animation: myframe 2s infinite;
+			animation-delay: 2s;
+		}
+		.fly-in-text li:last-child{
+			margin-right: 0;
+		}
+		.fly-in-text.hidden li{
+			opacity: 0;
+		}
+		.fly-in-text.hidden li:nth-child(1){ transform: translateX(-200px) translateY(-200px); }
+		.fly-in-text.hidden li:nth-child(2){ transform: translateX(20px) translateY(100px); }
+		.fly-in-text.hidden li:nth-child(3){ transform: translateX(-150px) translateY(-80px); }
+		.fly-in-text.hidden li:nth-child(4){ transform: translateX(10px) translateY(-200px); }
+		.fly-in-text.hidden li:nth-child(5){ transform: translateX(-300px) translateY(200px); }
+		.fly-in-text.hidden li:nth-child(6){ transform: translateX(20px) translateY(-20px); }
+		.fly-in-text.hidden li:nth-child(7){ transform: translateX(50px) translateY(150px); }
+		#btn{
+			color: #ccc;
+			text-decoration: none;
+			border: 2px solid #ccc;
+			padding: 20px;
+			position: absolute;
+			top: 70%;
+			left: 50%;
+			transform: translateX(-40%) translateY(-60%);
+			border-radius: 50%;
+			animation: myframe1 2s infinite;
+			animation-delay: 2s;
+			transition: all 0.7s ease;
+			font-family: bat;
+		}
+		#btn:hover{
+			background-color: #1dcaff;
+			color: #003366;
+			text-shadow: 0px 0px 10px, #CF5C3F,0px 0px 20px
+							 #CF5C3F,0px 0px 30px #CF5C3F,
+								0px 0px 40px #CF5C3F,0px 0px 50px
+									 #CF5C3F,0px 0px 60px #CF5C3F;
+		}
+		@keyframes myframe{
+			0%{text-shadow: 0px 0px 10px #c0deed,0px 0px 20px
+							 #c0deed,0px 0px 30px #c0deed,
+								0px 0px 40px #c0deed,0px 0px 50px
+									 #c0deed,0px 0px 60px #c0deed;}
+			25%{text-shadow: 0px 0px 10px #1dcaff,0px 0px 20px
+							 #1dcaff,0px 0px 30px #1dcaff,
+								0px 0px 40px #1dcaff,0px 0px 50px
+									 #1dcaff,0px 0px 60px #1dcaff;}
+			50%{text-shadow: 0px 0px 10px #00aced,0px 0px 20px
+							 #00aced,0px 0px 30px #00aced,
+								0px 0px 40px #00aced,0px 0px 50px
+									 #00aced,0px 0px 60px #00aced;}
+			100%{text-shadow: 0px 0px 10px #0084b4,0px 0px 20px
+							 #0084b4,0px 0px 30px #0084b4,
+								0px 0px 40px #0084b4,0px 0px 50px
+									 #0084b4,0px 0px 60px #0084b4;}
+		}
+		@keyframes myframe1{
+			0%{text-shadow: 0px 0px 10px #c0deed,0px 0px 20px
+							 #c0deed,0px 0px 30px #c0deed,
+								0px 0px 40px #c0deed,0px 0px 50px
+									 #c0deed,0px 0px 60px #c0deed;
+										border:2px solid #003366;}
+			25%{text-shadow: 0px 0px 10px #1dcaff,0px 0px 20px
+							 #1dcaff,0px 0px 30px #1dcaff,
+								0px 0px 40px #1dcaff,0px 0px 50px
+									 #1dcaff,0px 0px 60px #1dcaff;
+										border:2px solid #003366;}
+			50%{text-shadow: 0px 0px 10px #00aced,0px 0px 20px
+							 #00aced,0px 0px 30px #00aced,
+								0px 0px 40px #00aced,0px 0px 50px
+									 #00aced,0px 0px 60px #00aced;
+										border:2px solid #003366;}
+			100%{text-shadow: 0px 0px 10px #0084b4,0px 0px 20px
+							 #0084b4,0px 0px 30px #0084b4,
+								0px 0px 40px #0084b4,0px 0px 50px
+									 #0084b4,0px 0px 60px #0084b4;
+										border:2px solid #003366;}
+		}
+		@font-face{
+			font-family: "bat";
+			src:url("batmfa__.ttf");
+		}
+	</style>
+</head>
+<body>
+	<ul class="fly-in-text hidden">
+		<li>W</li>
+		<li>E</li>
+		<li>L</li>
+		<li>C</li>
+		<li>O</li>
+		<li>M</li>
+		<li>E</li>
+	</ul>
+	<a id="btn" href="index.html" target="_blank" type="button" >To My Website</a>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			setTimeout(function(){
+				$('.fly-in-text').removeClass('hidden');
+			}, 500);
+		})();
+	</script>
+</body>
+</html>

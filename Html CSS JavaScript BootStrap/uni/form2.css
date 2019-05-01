@@ -1,0 +1,16 @@
+body{
+	background-image: url("tech/forum.jpg");
+}
+h1{
+	color: white;
+	text-align: center;
+	font-family: bat;
+	opacity: .6;
+}
+@font-face{
+	font-family: "bat";
+	src:url("batmfa__.ttf");
+}
+table{
+	opacity: .6;
+}

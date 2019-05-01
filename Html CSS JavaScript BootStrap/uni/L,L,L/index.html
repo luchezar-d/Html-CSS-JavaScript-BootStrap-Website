@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Questions</title>
+</head>
+<body>
+<center>
+<fieldset style="margin-top: 20px;">
+<p class="questionText"><b>Какво означава съкращението CSS ? </b></p>
+<hr>
+<div id="labels1">
+<p style="font-size: 13px;"><span >Colorful Styling Sheets</span>&emsp;&emsp;&emsp;
+    <span>Create Style Sheet</span>&emsp;&emsp;&emsp;<span id="CSS">Cascading Style Sheet</span>
+</p>
+</div>
+
+<div id="answers1">
+<input type="radio" name="answer1" id="CSS1">
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<input type="radio" name="answer1" id="CSS2">
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<input type="radio" name="answer1" id="CSS3">
+</div>
+<br>
+<button class="buttons" style="margin-top: 20px;" id="but1">Submit</button>
+<br>
+<p class="errorMsg" id="msg1">ГРЕШКА !</p>
+
+</fieldset>
+
+<fieldset>
+<p class="questionText"><b>Koи от следните html тагове не се поддържат в hmtl5 ?</b></p>
+<hr>
+<div id="labels2">
+<p style="font-size: 13px;"><span>&lt;video&gt;</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    <span id="DIR">&lt;dir&gt;</span> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    <span>&lt;font&gt;</span> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    <span id="BIG">&lt;big&gt;</span> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    <span>&lt;h3&gt;</span></p>
+</div>
+
+<div id="answers2">
+<input type="radio" name="answer2">
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<input type="radio" name="answer2" id="dir">
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<input type="radio" name="answerOption">
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<input type="radio" name="answerOption" id="big">
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<input type="radio" name="answer2">
+</div>
+<button class="buttons" style="margin-top: 20px;" id="but2">Submit</button>
+<br>
+<p class="errorMsg" id="msg2">Грешка !</p>
+</fieldset>
+</center>
+<button type="button" onclick="window.location.href='question.html'" id="btn">Следващ въпрос ></button>
+</body>
+<style>
+#btn{
+    float: right;
+    margin:70px;
+}
+.errorMsg {
+display:none;
+color:red;
+}
+
+.buttons {
+width: 250px;
+height: 50px;
+border-radius: 55px;
+}
+
+#labels1 {
+margin-top: 30px;
+}
+
+#labels2 {
+margin-top: 10px;
+}
+
+p{
+color: white;
+}
+
+#answers1 {
+margin-top: 10px;
+}
+
+#answers2 {
+margin-top: 20px;
+}
+
+.questionText {
+width: 500px;
+word-wrap: break-word;
+padding-bottom: 25px;
+margin-top: 50px;
+}
+
+fieldset{
+background-color:grey;
+width: 700px;
+height: 350px;
+margin-top: 80px;
+border-radius: 55px;
+box-shadow: 5px 5px 10px 5px;
+}
+body{
+    background-color: #353638;
+}
+</style>
+<script>
+
+function checkMultipleAnswers(answer1, answer2){
+    errMsg2.style.display = "inline-block";
+    if( answer1.checked && answer2.checked ){
+        errMsg2.style.color = "#04fc00";
+        errMsg2.innerHTML = "<b>Верни отговори !</b>";
+    }
+    else {
+        answerNotify2.style.color = "#04fc00";
+        answerNotify3.style.color = "#04fc00";
+        errMsg2.innerHTML = "<b>Грешни отговори !</b>";
+        errMsg2.style.color = "#c4100d";
+  }
+}
+
+function checkAnswer(answer){
+    errMsg.style.display = "inline-block";
+    if( answer.checked ){
+        errMsg.style.color = "#04fc00";
+        errMsg.innerHTML = "<b>Верен отговор !</b>";
+    }
+    else {
+        answerNotify.style.color = "#04fc00";
+        errMsg.style.color = "#c4100d";
+        errMsg.innerHTML = "<b>Грешен отговор !</b>";
+  }
+}
+
+var answer1 = document.getElementById("CSS3");
+var answerNotify = document.getElementById("CSS");
+var answerNotify2 = document.getElementById("DIR");
+var answerNotify3 = document.getElementById("BIG");
+var answer2 = document.getElementById("dir");
+var answer3 = document.getElementById("big");
+var errMsg = document.getElementById("msg1");
+var errMsg2 = document.getElementById("msg2");
+
+document.getElementById("but1").addEventListener('click', function() {
+    checkAnswer(answer1);
+});
+
+document.getElementById("but2").addEventListener('click', function() {
+    checkMultipleAnswers(answer2, answer3);
+});
+</script>
+</html>
